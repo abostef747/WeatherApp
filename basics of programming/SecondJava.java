@@ -50,6 +50,8 @@ public class SecondJava{
         System.out.println("--------------------");
 
         while (true) { 
+
+            //Asking the users if they want to roll the dice and rolling the dice
             System.out.println("Roll the dices? , (Y / N) ");
             rollDiceAnswer = scanner.nextLine().charAt(0);
             if (rollDiceAnswer == 'y') {
@@ -61,13 +63,15 @@ public class SecondJava{
                 System.out.println("The Game Ended!");
                 break;
             }
-    
+
+            //Round and results of the round
             System.out.println("Round "+ round);
             System.out.print(player1.getName()+" got: ");
             System.out.println(player1.getDiceRolled());
             System.out.print(player2.getName()+" got: ");
             System.out.println(player2.getDiceRolled());
-    
+
+            //if condition to give result of who won this round
             if(player1.getDiceRolled() > player2.getDiceRolled()){
                 System.out.println(player1.getName()+" wins this round!");
                 player1.setPoints();
@@ -75,7 +79,7 @@ public class SecondJava{
                 System.out.println(player2.getName()+" wins this round!");
                 player2.setPoints();
             }   
-
+            //adding to the round number so in next loop it reads the round after it
             round++;
         }
     

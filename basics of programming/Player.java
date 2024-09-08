@@ -1,6 +1,3 @@
-
-
-
 public class Player {
     private String name;
     private char gender;
